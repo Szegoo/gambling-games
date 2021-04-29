@@ -1,0 +1,378 @@
+{
+  "contractName": "NotSafe",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "money",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "porez",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"money\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"porez\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/sakac/Desktop/GamblingContract/contracts/NotSoPrivate.sol\":\"NotSafe\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/sakac/Desktop/GamblingContract/contracts/NotSoPrivate.sol\":{\"keccak256\":\"0x92e01bac5e17910768ce17db9bbdf4d6050e3e523dbbdf3fb3b4a28b01ffb1c8\",\"urls\":[\"bzz-raw://24b5e13f0ab3cdf4a86d1b3d87737f042065256dcca2ae2105ff7f76230ddb87\",\"dweb:/ipfs/QmQDoxZsM2es7KwTrDfkA6xc1zFmxrNMKBB1EB8dhh5y9y\"]}},\"version\":1}",
+  "bytecode": "0x601060005560c0604052600960808190527f61646d696e31323334000000000000000000000000000000000000000000000060a09081526100439160019190610056565b5034801561005057600080fd5b506100f1565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061009757805160ff19168380011785556100c4565b828001600101855582156100c4579182015b828111156100c45782518255916020019190600101906100a9565b506100d09291506100d4565b5090565b6100ee91905b808211156100d057600081556001016100da565b90565b60b1806100ff6000396000f3fe6080604052348015600f57600080fd5b5060043610604e577c010000000000000000000000000000000000000000000000000000000060003504634ddd108a81146053578063fd26efae14606b575b600080fd5b60596071565b60408051918252519081900360200190f35b60596077565b60005481565b60148156fea265627a7a7231582086c81e31e24560e13535bd0c422bbf877c8056e9b95f816024d8a0c1b138fccd64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b5060043610604e577c010000000000000000000000000000000000000000000000000000000060003504634ddd108a81146053578063fd26efae14606b575b600080fd5b60596071565b60408051918252519081900360200190f35b60596077565b60005481565b60148156fea265627a7a7231582086c81e31e24560e13535bd0c422bbf877c8056e9b95f816024d8a0c1b138fccd64736f6c63430005100032",
+  "sourceMap": "47:2:1:-;24:25;;97:37;0:138;97:37;;0:138;97:37;;;;;;;;;;;;;;:::i;:::-;;0:138;8:9:-1;5:2;;;30:1;27;20:12;5:2;0:138:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;0:138:1;;;-1:-1:-1;0:138:1;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "0:138:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;0:138:1;;;;;;;;;;;;;;;;;;;;;;;;24:25;;;:::i;:::-;;;;;;;;;;;;;;;;56:34;;;:::i;24:25::-;;;;:::o;56:34::-;88:2;56:34;:::o",
+  "source": "contract NotSafe {\r\n    uint256 public money = 16;\r\n    uint256 public constant porez = 20;\r\n    string private password = \"admin1234\";\r\n}\r\n",
+  "sourcePath": "C:/Users/sakac/Desktop/GamblingContract/contracts/NotSoPrivate.sol",
+  "ast": {
+    "absolutePath": "/C/Users/sakac/Desktop/GamblingContract/contracts/NotSoPrivate.sol",
+    "exportedSymbols": {
+      "NotSafe": [
+        33
+      ]
+    },
+    "id": 34,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 33,
+        "linearizedBaseContracts": [
+          33
+        ],
+        "name": "NotSafe",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 26,
+            "name": "money",
+            "nodeType": "VariableDeclaration",
+            "scope": 33,
+            "src": "24:25:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 24,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "24:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "3136",
+              "id": 25,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "47:2:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_16_by_1",
+                "typeString": "int_const 16"
+              },
+              "value": "16"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 29,
+            "name": "porez",
+            "nodeType": "VariableDeclaration",
+            "scope": 33,
+            "src": "56:34:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 27,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "56:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "3230",
+              "id": 28,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "88:2:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_20_by_1",
+                "typeString": "int_const 20"
+              },
+              "value": "20"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 32,
+            "name": "password",
+            "nodeType": "VariableDeclaration",
+            "scope": 33,
+            "src": "97:37:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 30,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "97:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "61646d696e31323334",
+              "id": 31,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "123:11:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_e7db5681cad3655b92b2b38be486b8261f0c074bbfc3253aa34ca143634fcdbd",
+                "typeString": "literal_string \"admin1234\""
+              },
+              "value": "admin1234"
+            },
+            "visibility": "private"
+          }
+        ],
+        "scope": 34,
+        "src": "0:138:1"
+      }
+    ],
+    "src": "0:140:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/sakac/Desktop/GamblingContract/contracts/NotSoPrivate.sol",
+      "exportedSymbols": {
+        "NotSafe": [
+          33
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            33
+          ],
+          "name": "NotSafe",
+          "scope": 34
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "money",
+              "scope": 33,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 24,
+                "name": "ElementaryTypeName",
+                "src": "24:7:1"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "3136",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 16",
+                  "value": "16"
+                },
+                "id": 25,
+                "name": "Literal",
+                "src": "47:2:1"
+              }
+            ],
+            "id": 26,
+            "name": "VariableDeclaration",
+            "src": "24:25:1"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "name": "porez",
+              "scope": 33,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 27,
+                "name": "ElementaryTypeName",
+                "src": "56:7:1"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "3230",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 20",
+                  "value": "20"
+                },
+                "id": 28,
+                "name": "Literal",
+                "src": "88:2:1"
+              }
+            ],
+            "id": 29,
+            "name": "VariableDeclaration",
+            "src": "56:34:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "password",
+              "scope": 33,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "string",
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "string",
+                  "type": "string"
+                },
+                "id": 30,
+                "name": "ElementaryTypeName",
+                "src": "97:6:1"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "61646d696e31323334",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "string",
+                  "type": "literal_string \"admin1234\"",
+                  "value": "admin1234"
+                },
+                "id": 31,
+                "name": "Literal",
+                "src": "123:11:1"
+              }
+            ],
+            "id": 32,
+            "name": "VariableDeclaration",
+            "src": "97:37:1"
+          }
+        ],
+        "id": 33,
+        "name": "ContractDefinition",
+        "src": "0:138:1"
+      }
+    ],
+    "id": 34,
+    "name": "SourceUnit",
+    "src": "0:140:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-04-24T17:41:22.230Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
