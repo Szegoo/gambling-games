@@ -9,6 +9,9 @@ contract PredictionMarket {
         uint price;
     }
 
+    mapping(address => bool) public admins;
+    mapping(address => bool) public verifications;
+
     uint public constant TX_FEE_NUMERATOR = 1;
     uint public constant TX_FEE_DENOMINATOR = 500;
 
@@ -71,10 +74,10 @@ contract PredictionMarket {
         uint fee = (amount * order.price) * TX_FEE_NUMERATOR / TX_FEE_DENOMINATOR;
         uint feeShares = amount * TX_FEE_NUMERATOR / TX_FEE_DENOMINATOR;
 
-        shares[order.user] += (amount - feeShares);
+        shares[msg.sender] += (amount - feeShares);
         shares[owner] += feeShares;
 
-        balances[msg.sender] += (amount*order.price) - fee;
+        balances[order.user] += (amount*order.price) - fee;
         balances[owner] += fee;
 
         order.amount -= amount;
@@ -114,11 +117,6 @@ contract PredictionMarket {
         Order storage order = orders[orderId];
         require(order.user == msg.sender);
 
-        if(order.ordertype == OrderType.Buy) {
-            balances[msg.sender] += order.amount * order.price;
-        }else {
-            shares[msg.sender] += order.amount;
-        }
         delete orders[orderId];
         orderCancelled(orderId);
     }
@@ -143,5 +141,13 @@ contract PredictionMarket {
         msg.sender.transfer(payout);
 
         Payout(msg.sender, payout);
+    }
+    function addVerified(address verified) {
+        require(msg.sender == owner);
+        admins[verified] = true;
+    }
+    function confirm() {
+        require(admins[msg.sender]);
+        verifications[msg.sender] = true;
     }
 }
