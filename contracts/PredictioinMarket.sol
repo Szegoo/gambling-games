@@ -10,7 +10,7 @@ contract PredictionMarket {
     }
 
     mapping(address => bool) public admins;
-    mapping(address => bool) public verifications;
+    uint confirmationCount = 0;
 
     uint public constant TX_FEE_NUMERATOR = 1;
     uint public constant TX_FEE_DENOMINATOR = 500;
@@ -122,7 +122,7 @@ contract PredictionMarket {
     }
     function resolve (bool _result) public {
         require(now > deadline);
-        require(msg.sender == owner);
+        require(confirmationCount == 4);
         require(result == Result.Open);
 
         result = _result ? Result.Yes: Result.No;
@@ -143,11 +143,12 @@ contract PredictionMarket {
         Payout(msg.sender, payout);
     }
     function addVerified(address verified) {
-        require(msg.sender == owner);
+        require(admins[msg.sender]);
         admins[verified] = true;
     }
     function confirm() {
         require(admins[msg.sender]);
-        verifications[msg.sender] = true;
+        require(now > deadline);
+        counfirmationCount++;
     }
 }
